@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://lumi.new/lumi.ing/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Engineer Portfolio | Innovator | Problem Solver</title>
+    <meta name="description" content="Portfolio of an aspiring AI Engineer specializing in machine learning, deep learning, and innovative AI solutions">
+    
+    <!-- PWA Configuration for offline viewing -->
+    <meta name="theme-color" content="#1e293b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Binary Rain Animation */
+      .binary-rain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 1;
+      }
+      
+      .binary-digit {
+        position: absolute;
+        color: #06b6d4;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 50px;
+        opacity: 0.9;
+        animation: binaryFall linear infinite;
+      }
+      
+      @keyframes binaryFall {
+        0% {
+          transform: translateY(-100vh);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.7;
+        }
+        90% {
+          opacity: 0.7;
+        }
+        100% {
+          transform: translateY(100vh);
+          opacity: 0;
+        }
+      }
+      
+      /* Floating Binary Numbers */
+      .floating-binary {
+        position: absolute;
+        font-family: 'JetBrains Mono', monospace;
+        color: rgba(6, 182, 212, 0.3);
+        font-size: 50px;
+        pointer-events: none;
+        z-index: 1;
+      }
+      
+      .floating-binary-1 {
+        top: 10%;
+        left: 5%;
+        animation: floatBinary1 8s ease-in-out infinite;
+      }
+      
+      .floating-binary-2 {
+        top: 20%;
+        right: 10%;
+        animation: floatBinary2 10s ease-in-out infinite reverse;
+      }
+      
+      .floating-binary-3 {
+        top: 60%;
+        left: 8%;
+        animation: floatBinary3 12s ease-in-out infinite;
+      }
+      
+      .floating-binary-4 {
+        top: 70%;
+        right: 15%;
+        animation: floatBinary4 9s ease-in-out infinite reverse;
+      }
+      
+      .floating-binary-5 {
+        top: 40%;
+        left: 85%;
+        animation: floatBinary5 11s ease-in-out infinite;
+      }
+      
+      @keyframes floatBinary1 {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+        25% { transform: translate(20px, -30px) rotate(5deg); opacity: 0.5; }
+        50% { transform: translate(-15px, -20px) rotate(-3deg); opacity: 0.4; }
+        75% { transform: translate(10px, -40px) rotate(2deg); opacity: 0.6; }
+      }
+      
+      @keyframes floatBinary2 {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.4; }
+        33% { transform: translate(-25px, 35px) rotate(-4deg); opacity: 0.6; }
+        66% { transform: translate(20px, 25px) rotate(6deg); opacity: 0.3; }
+      }
+      
+      @keyframes floatBinary3 {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+        20% { transform: translate(30px, -25px) rotate(3deg); opacity: 0.5; }
+        40% { transform: translate(-20px, -35px) rotate(-5deg); opacity: 0.4; }
+        60% { transform: translate(25px, -15px) rotate(4deg); opacity: 0.6; }
+        80% { transform: translate(-10px, -30px) rotate(-2deg); opacity: 0.3; }
+      }
+      
+      @keyframes floatBinary4 {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.4; }
+        50% { transform: translate(-30px, 40px) rotate(-6deg); opacity: 0.6; }
+      }
+      
+      @keyframes floatBinary5 {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+        25% { transform: translate(-20px, -30px) rotate(-3deg); opacity: 0.5; }
+        50% { transform: translate(15px, -25px) rotate(4deg); opacity: 0.4; }
+        75% { transform: translate(-25px, -35px) rotate(-5deg); opacity: 0.6; }
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .binary-digit {
+          font-size: 12px;
+        }
+        .floating-binary {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
